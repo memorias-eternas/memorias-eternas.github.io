@@ -1,0 +1,221 @@
+/* ====== FRASE / INTRO ====== */
+.frase {
+  padding: 30px;
+  background: transparent;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+
+.frase p {
+  color: #111;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ====== EXTRAS SECTION ====== */
+.extras {
+  padding: 50px;
+  background: transparent;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+
+.extras .accordion {
+  min-height: 60vh;
+  max-width: 960px;
+  margin: 0 auto;
+  row-gap: 16px;
+  background: transparent !important; /* Fuerza que el contenedor del acordeón no tenga fondo */
+}
+
+/* ====== ACCORDION GLASS PREMIUM ====== */
+.accordion-item {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 18px !important;
+  overflow: hidden;
+
+  background: rgb(164, 148, 185) !important; /* Tu fondo oscuro glass */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: 0.25s ease-in-out;
+  margin-bottom: 16px;
+}
+
+.accordion-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+/* Base del botón */
+.accordion-button {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px; /* Separación limpia para tus spans de icono y título */
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 18px 22px;
+  letter-spacing: 0.3px;
+  border: none !important;
+}
+
+/* Estado Cerrado (Colapsado) */
+.accordion-button.collapsed {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+/* Estado Expandido/Abierto - AQUÍ BOOTSTRAP METÍA EL AZUL Y BLANCO */
+.accordion-button:not(.collapsed) {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.06
+  ) !important; /* Fondo sutil de selección */
+  color: #ffffff !important; /* Forzamos texto blanco */
+  box-shadow: none !important; /* Eliminamos el sombreado azul predeterminado */
+}
+
+/* Quitar por completo el foco azul/celeste de Bootstrap al clickear */
+.accordion-button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  border-color: transparent !important;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.06
+  ) !important; /* Mantiene la consistencia estética si está abierto */
+  color: #ffffff !important;
+}
+
+/* SOLUCIÓN AL ICONO: Invierte el SVG de la flecha de Bootstrap para que sea blanca */
+.accordion-button::after {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* Clases de utilidad para los elementos internos de tus botones */
+.acc-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.acc-title {
+  flex-grow: 1;
+  text-align: left;
+}
+
+/* Cuerpo del acordeón */
+.accordion-body {
+  font-size: 0.95rem;
+  color: #cfcfcf !important; /* Asegura el gris claro legible sobre el fondo oscuro */
+  padding: 18px 22px;
+  line-height: 1.7;
+  min-height: 280px;
+  background: transparent !important; /* Transparente para que no pinte un fondo blanco e個別 */
+}
+
+/* ====== IMÁGENES EXTRAS ====== */
+.imagenes-extras {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.imagenes-extras img {
+  flex: 1 1 280px;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+
+  transition: 0.25s ease-in-out;
+}
+
+.imagenes-extras img:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* ====== BOTONES ====== */
+.btn-contratar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px; /* Separación con respecto al acordeón */
+}
+
+.btn-contacto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.4rem;
+  background: rgb(164, 148, 185);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.btn-contacto:hover {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 576px) {
+  .frase p {
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+  }
+
+  .extras {
+    padding: 25px 15px;
+  }
+
+  .accordion-button {
+    font-size: 0.98rem;
+    padding: 16px 18px;
+  }
+
+  .accordion-body {
+    font-size: 0.92rem;
+    min-height: auto;
+  }
+
+  .imagenes-extras img {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .imagenes-extras {
+    gap: 16px;
+  }
+
+  .imagenes-extras img {
+    flex: 0 0 calc(33.333% - 12px);
+    max-width: calc(33.333% - 12px);
+  }
+}

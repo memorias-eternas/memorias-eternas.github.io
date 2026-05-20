@@ -1,0 +1,76 @@
+.hero {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.logotipo img {
+  width: auto-fit;
+}
+
+.eslogan {
+  margin-top: 20px;
+  font-family: "h1";
+  color: #4a2c7a; /* Modificado: Violeta oscuro principal con máxima fuerza */
+  font-size: 2.5em;
+  text-shadow: 0 2px 4px rgba(74, 44, 122, 0.1); /* Sutil relieve místico */
+}
+
+/* ====== BOTÓN FLOTANTE DE SONIDO PREMIUM VIOLETA ====== */
+.btn-sonido {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(97, 61, 155, 0.4); /* Modificado: Borde sólido lavanda */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.85
+  ); /* Modificado: Base blanca glassmorphism */
+  color: #4a2c7a; /* Modificado: Icono en el tono principal de la marca */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 8px 24px rgba(74, 44, 122, 0.15); /* Modificado: Sombra con el tono de la imagen */
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn-sonido:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(97, 61, 155, 0.25); /* Modificado: Resplandor púrpura en hover */
+  background: #613d9b; /* Modificado: Pinta el botón con el púrpura de tus iconos al pasar el cursor */
+  color: #ffffff; /* Modificado: Invierte el color del icono a blanco */
+  border-color: #613d9b;
+}
+
+.btn-sonido.muted {
+  opacity: 0.85; /* Modificado: Ajuste de opacidad para que no se pierda en fondos claros */
+}
+
+.btn-sonido.muted i {
+  color: #d9383a; /* Modificado: Rojo ligeramente más profundo para una advertencia elegante */
+}
+
+/* (Opcional) Suavizar elementos que animamos con GSAP */
+.hero,
+.logotipo,
+.eslogan {
+  will-change: transform, opacity;
+}

@@ -1,0 +1,181 @@
+/* ====== CONTACTO SECTION ====== */
+.contacto-section {
+  background: transparent;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+
+/* Card glass clara */
+.contacto-card {
+  background: rgba(255, 255, 255, 0.75); /* Modificado: Fondo claro premium */
+  border: 1px solid rgba(0, 0, 0, 0.08); /* Modificado: Borde sutil oscuro */
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  color: #111111; /* Modificado: Texto principal en negro */
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04); /* Modificado: Sombra muy suave */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition: 0.25s ease-in-out;
+}
+
+.contacto-card:hover {
+  transform: translateY(-4px);
+  border-color: rgb(
+    164,
+    148,
+    185
+  ); /* Modificado: Borde lavanda al pasar el cursor */
+  box-shadow: 0 12px 28px rgba(164, 148, 185, 0.1);
+}
+
+.contacto-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.8rem;
+  color: #111111;
+}
+
+.contacto-text {
+  color: #444444; /* Modificado: Gris oscuro de alta legibilidad */
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* Items de info */
+.contacto-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.contacto-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  color: rgb(164, 148, 185); /* Modificado: Iconos en el tono de la marca */
+}
+
+.contacto-label {
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+  color: #111111;
+}
+
+.contacto-value {
+  color: #444444; /* Modificado: Texto secundario legible */
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Form controls consistentes con Opiniones */
+#contactoForm input,
+#contactoForm textarea,
+#contactoForm select {
+  background-color: #ffffff; /* Modificado: Fondo blanco limpio */
+  color: #111111; /* Modificado: Texto negro al escribir */
+  border: 1px solid rgba(0, 0, 0, 0.15); /* Modificado: Borde limpio */
+  border-radius: 12px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#contactoForm input::placeholder,
+#contactoForm textarea::placeholder {
+  color: #888888; /* Modificado: Gris medio para destacar en fondo claro */
+}
+
+/* Focus suave con destello lavanda */
+#contactoForm input:focus,
+#contactoForm textarea:focus,
+#contactoForm select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(164, 148, 185, 0.3); /* Resplandor lavanda */
+  border-color: hsla(260, 45%, 82%, 1);
+  color: #111111; /* Asegura legibilidad total */
+  background-color: #ffffff;
+}
+
+#contactoForm select option {
+  background-color: #ffffff; /* Modificado: Fondo desplegable blanco */
+  color: #111111; /* Modificado: Texto desplegable negro */
+}
+
+/* Mapa elegante y limpio */
+.contacto-map {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.75
+  ); /* Modificado: Fondo coherente con la card */
+  border: 1px solid rgba(0, 0, 0, 0.08); /* Modificado: Borde fino oscuro */
+  border-radius: 20px;
+  overflow: hidden;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.contacto-map iframe {
+  width: 100%;
+  height: 360px;
+  border: 0;
+}
+
+/* Botón enviar (Fondo lavanda pastel que pasa a transparente con borde) */
+.btn-form {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.4rem;
+  width: 100%;
+
+  background: hsla(
+    265,
+    55%,
+    86%,
+    1
+  ); /* Modificado: Color base lavanda pastel */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+
+  color: #111111; /* Modificado: Texto en negro para contraste inicial */
+  font-weight: 700;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.btn-form:hover {
+  background: transparent;
+  color: rgb(
+    164,
+    148,
+    185
+  ); /* Modificado: Texto lavanda un poco más oscuro sobre el fondo */
+  border-color: rgb(164, 148, 185); /* Modificado: Borde a juego */
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .contacto-card {
+    border-radius: 16px;
+    padding: 1.6rem 1.2rem;
+  }
+
+  .contacto-title {
+    font-size: 1.3rem;
+  }
+
+  .contacto-map iframe {
+    height: 260px;
+  }
+}

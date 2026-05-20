@@ -1,0 +1,1883 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../shared/estilos.css" />
+    <link rel="stylesheet" href="../../shared/catalogos.css" />
+    <link rel="stylesheet" href="planeacion.css" />
+    <title>SF ME</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg text-white navbar-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand logo" href="../../index.html"
+          ><img src="../../assets/logotipo.svg" alt="Logotipo"
+        /></a>
+
+        <!-- Botón hamburguesa -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../opiniones/opiniones.html"
+                >Opiniones</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../conocenos/conocenos.html"
+                >Conocenos</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Servicios
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end cont-sub">
+                <li>
+                  <a
+                    class="dropdown-item sub-s"
+                    href="../paquetes_funerarios/paquetes-funerarios.html"
+                    >Paquetes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item sub-s"
+                    href="../planeacion/planeacion.html"
+                    >Planeacion</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item sub-s" href="../urnas/urnas.html"
+                    >Urnas</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item sub-s" href="../ataudes/ataudes.html"
+                    >Ataudes</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item sub-s" href="../extras/extras.html"
+                    >Extras</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../contacto/contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <h1 class="titulos text-center">Planea tu futuro cuando ya no estes</h1>
+    </header>
+
+    <section class="planeacion-section">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="planeacion-title m-0">Planeación a Futuro</h2>
+        </div>
+
+        <p class="planeacion-sub mb-5">
+          Elige un plan de previsión para dejar todo organizado con
+          anticipación. Puedes personalizar ceremonia, ataúd/urna y servicios
+          adicionales.
+        </p>
+
+        <!-- PLANES PREDEFINIDOS -->
+        <div class="row g-4">
+          <!-- Plan 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="card-plan ux-float"
+              data-float-y="20"
+              data-float-duration="2"
+            >
+              <div class="plan-badge">Básico</div>
+
+              <div class="plan-head">
+                <h3>Plan Previsión Esencial</h3>
+                <p class="plan-price">$9,900 MXN</p>
+              </div>
+
+              <ul class="plan-list">
+                <li>Asesoría y trámite completo</li>
+                <li>Velación estándar</li>
+                <li>Traslado local</li>
+                <li>Arreglo floral sencillo</li>
+              </ul>
+
+              <a
+                href="javascript:void(0)"
+                class="plan-btn"
+                onclick="
+                  abrirSimulacionContrato('Plan Previsión Esencial', 9900)
+                "
+              >
+                Simular pago y contrato
+              </a>
+            </div>
+          </div>
+
+          <!-- Plan 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="card-plan ux-float"
+              data-float-y="20"
+              data-float-duration="2"
+            >
+              <div class="plan-badge">Recomendado</div>
+
+              <div class="plan-head">
+                <h3>Plan Previsión Integral</h3>
+                <p class="plan-price">$15,500 MXN</p>
+              </div>
+
+              <ul class="plan-list">
+                <li>Todo lo del Esencial</li>
+                <li>Capilla + servicio extendido</li>
+                <li>Urna o ataúd a elegir</li>
+                <li>2 arreglos florales</li>
+                <li>Libro de condolencias</li>
+              </ul>
+
+              <a
+                href="javascript:void(0)"
+                class="plan-btn"
+                onclick="
+                  abrirSimulacionContrato('Plan Previsión Integral', 15500)
+                "
+              >
+                Simular pago y contrato
+              </a>
+            </div>
+          </div>
+
+          <!-- Plan 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="card-plan ux-float"
+              data-float-y="20"
+              data-float-duration="2"
+            >
+              <div class="plan-badge">Premium</div>
+
+              <div class="plan-head">
+                <h3>Plan Previsión Premium</h3>
+                <p class="plan-price">$24,900 MXN</p>
+              </div>
+
+              <ul class="plan-list">
+                <li>Todo lo del Integral</li>
+                <li>Carroza premium</li>
+                <li>Ataúd o urna premium</li>
+                <li>Música en vivo (opcional)</li>
+                <li>Grabado conmemorativo</li>
+              </ul>
+
+              <a
+                href="javascript:void(0)"
+                class="plan-btn"
+                onclick="
+                  abrirSimulacionContrato('Plan Previsión Premium', 24900)
+                "
+              >
+                Simular pago y contrato
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PLAN PERSONALIZADO -->
+        <div class="container mt-5 px-0">
+          <div class="row g-4">
+            <!-- Columna izquierda: acordeón de configuración -->
+            <div class="col-lg-8">
+              <h2 class="planeacion-title mb-3">Arma tu plan personalizado</h2>
+              <p class="planeacion-sub mb-4">
+                Selecciona paso a paso los servicios que necesitas. El precio se
+                calculará automáticamente.
+              </p>
+
+              <div class="accordion" id="planAccordion">
+                <!-- Paso 1: Tipo de servicio -->
+                <div
+                  class="accordion-item plan-step ux-float"
+                  data-step-label="Tipo de servicio"
+                  data-next-step="step2Content"
+                  data-float-y="10"
+                  data-float-duration="2"
+                >
+                  <h2 class="accordion-header" id="heading1">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#step1Content"
+                      aria-expanded="true"
+                      aria-controls="step1Content"
+                    >
+                      1. ¿Será entierro o cremación?
+                    </button>
+                  </h2>
+                  <div
+                    id="step1Content"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="heading1"
+                    data-bs-parent="#planAccordion"
+                  >
+                    <div class="accordion-body">
+                      <div class="mb-3 small text-muted">
+                        Selecciona una opción para continuar.
+                      </div>
+
+                      <div class="form-check mb-2">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="disposicion"
+                          id="disposicion_entierro"
+                          value="inhumacion"
+                          data-price="12000"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="disposicion_entierro"
+                        >
+                          Entierro (inhumación) – $12,000 MXN
+                        </label>
+                      </div>
+
+                      <div class="form-check mb-2">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="disposicion"
+                          id="disposicion_cremacion"
+                          value="cremacion"
+                          data-price="9000"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="disposicion_cremacion"
+                        >
+                          Cremación – $9,000 MXN
+                        </label>
+                      </div>
+
+                      <button
+                        type="button"
+                        class="btn btn-primary mt-3 btn-next-step"
+                        disabled
+                      >
+                        Continuar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Paso 2: Ataúd o urna -->
+                <div
+                  class="accordion-item plan-step ux-float"
+                  data-step-label="Contenedor (ataúd / urna)"
+                  data-next-step="step3Content"
+                  data-float-y="10"
+                  data-float-duration="2"
+                >
+                  <h2 class="accordion-header" id="heading2">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#step2Content"
+                      aria-expanded="false"
+                      aria-controls="step2Content"
+                    >
+                      2. Elige ataúd o urna
+                    </button>
+                  </h2>
+                  <div
+                    id="step2Content"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="heading2"
+                    data-bs-parent="#planAccordion"
+                  >
+                    <div class="accordion-body">
+                      <!-- Opciones para ENTIERRO -->
+                      <div class="option-group" data-for="inhumacion">
+                        <p class="small text-muted mb-2">
+                          Opciones disponibles para entierro:
+                        </p>
+
+                        <!-- Estándar -->
+                        <div class="form-check mb-2">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_entierro"
+                            id="ataud_basico"
+                            data-price="8000"
+                          />
+                          <label class="form-check-label" for="ataud_basico">
+                            Ataúd básico – $8,000 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_entierro"
+                            id="ataud_premium"
+                            data-price="15000"
+                          />
+                          <label class="form-check-label" for="ataud_premium">
+                            Ataúd premium – $15,000 MXN
+                          </label>
+                        </div>
+
+                        <hr class="my-3" />
+
+                        <p class="small text-muted mb-2">
+                          Ataúdes personalizados (según catálogo):
+                        </p>
+
+                        <!-- PERSONALIZADOS: PRIMEROS 3 SIEMPRE VISIBLES -->
+                        <div class="form-check mb-2">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_entierro"
+                            id="ataud_clasico_nogal"
+                            data-price="18900"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="ataud_clasico_nogal"
+                          >
+                            Ataúd Clasico Nogal – $18,900 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_entierro"
+                            id="ataud_moderno_minimalista"
+                            data-price="21500"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="ataud_moderno_minimalista"
+                          >
+                            Ataúd Moderno Minimalista – $21,500 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_entierro"
+                            id="ataud_ecologico"
+                            data-price="15700"
+                          />
+                          <label class="form-check-label" for="ataud_ecologico">
+                            Ataúd Ecologico – $15,700 MXN
+                          </label>
+                        </div>
+
+                        <!-- PERSONALIZADOS EXTRA: OCULTOS AL INICIO (PARA VER MÁS / VER MENOS) -->
+                        <div class="form-check mb-2 extra-opcion d-none">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_entierro"
+                            id="ataud_premium_marmol"
+                            data-price="29800"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="ataud_premium_marmol"
+                          >
+                            Ataúd Premium Marmol – $29,800 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2 extra-opcion d-none">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_entierro"
+                            id="ataud_metalico"
+                            data-price="24300"
+                          />
+                          <label class="form-check-label" for="ataud_metalico">
+                            Ataúd Metalico – $24,300 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2 extra-opcion d-none">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_entierro"
+                            id="ataud_conmemorativo"
+                            data-price="26900"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="ataud_conmemorativo"
+                          >
+                            Ataúd Conmemorativo – $26,900 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2 extra-opcion d-none">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_entierro"
+                            id="ataud_roble_solido_imperial"
+                            data-price="19700"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="ataud_roble_solido_imperial"
+                          >
+                            Ataúd Roble Solido Imperial – $19,700 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2 extra-opcion d-none">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_entierro"
+                            id="ataud_blanco_serenity"
+                            data-price="22300"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="ataud_blanco_serenity"
+                          >
+                            Ataúd Blanco Serenity – $22,300 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2 extra-opcion d-none">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_entierro"
+                            id="ataud_ecologico_bambu"
+                            data-price="16400"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="ataud_ecologico_bambu"
+                          >
+                            Ataúd Ecologico Bambú – $16,400 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2 extra-opcion d-none">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_entierro"
+                            id="ataud_celestial_azul"
+                            data-price="25600"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="ataud_celestial_azul"
+                          >
+                            Ataúd Celestial Azul – $25,600 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2 extra-opcion d-none">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_entierro"
+                            id="ataud_metalico_titanio"
+                            data-price="27900"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="ataud_metalico_titanio"
+                          >
+                            Ataúd Metalico Titanio – $27,900 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2 extra-opcion d-none">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_entierro"
+                            id="ataud_artesanal_tallado"
+                            data-price="23850"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="ataud_artesanal_tallado"
+                          >
+                            Ataúd Artesanal Tallado – $23,850 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2 extra-opcion d-none">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_entierro"
+                            id="ataud_conmemorativo_aurora"
+                            data-price="28500"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="ataud_conmemorativo_aurora"
+                          >
+                            Ataúd Conmemorativo Aurora – $28,500 MXN
+                          </label>
+                        </div>
+
+                        <p class="small mt-2">
+                          <button
+                            type="button"
+                            class="btn btn-link p-0 link-light text-decoration-underline"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalCatalogoAtaudes"
+                          >
+                            Ver catálogo completo de ataúdes
+                          </button>
+                        </p>
+                      </div>
+
+                      <!-- Opciones para CREMACIÓN -->
+                      <div class="option-group d-none" data-for="cremacion">
+                        <p class="small text-muted mb-2">
+                          Opciones disponibles para cremación:
+                        </p>
+
+                        <!-- Estándar -->
+                        <div class="form-check mb-2">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_cremacion"
+                            id="urna_simple"
+                            data-price="3000"
+                          />
+                          <label class="form-check-label" for="urna_simple">
+                            Urna sencilla – $3,000 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_cremacion"
+                            id="urna_premium"
+                            data-price="6500"
+                          />
+                          <label class="form-check-label" for="urna_premium">
+                            Urna premium – $6,500 MXN
+                          </label>
+                        </div>
+
+                        <hr class="my-3" />
+
+                        <p class="small text-muted mb-2">
+                          Urnas personalizadas (según catálogo):
+                        </p>
+
+                        <!-- PERSONALIZADAS: PRIMERAS 3 SIEMPRE VISIBLES -->
+                        <div class="form-check mb-2">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_cremacion"
+                            id="urna_clasica"
+                            data-price="2450"
+                          />
+                          <label class="form-check-label" for="urna_clasica">
+                            Urna Clásica – $2,450 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_cremacion"
+                            id="urna_moderna"
+                            data-price="3100"
+                          />
+                          <label class="form-check-label" for="urna_moderna">
+                            Urna Moderna – $3,100 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_cremacion"
+                            id="urna_ecologica"
+                            data-price="1980"
+                          />
+                          <label class="form-check-label" for="urna_ecologica">
+                            Urna Ecológica – $1,980 MXN
+                          </label>
+                        </div>
+
+                        <!-- PERSONALIZADAS EXTRA: OCULTAS AL INICIO -->
+                        <div class="form-check mb-2 extra-opcion d-none">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_cremacion"
+                            id="urna_marmol"
+                            data-price="4750"
+                          />
+                          <label class="form-check-label" for="urna_marmol">
+                            Urna de Mármol – $4,750 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2 extra-opcion d-none">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_cremacion"
+                            id="urna_artistica"
+                            data-price="3990"
+                          />
+                          <label class="form-check-label" for="urna_artistica">
+                            Urna Artística – $3,990 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2 extra-opcion d-none">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_cremacion"
+                            id="urna_metalica"
+                            data-price="2890"
+                          />
+                          <label class="form-check-label" for="urna_metalica">
+                            Urna Metálica – $2,890 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2 extra-opcion d-none">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_cremacion"
+                            id="urna_minimalista"
+                            data-price="2200"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="urna_minimalista"
+                          >
+                            Urna Minimalista – $2,200 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2 extra-opcion d-none">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_cremacion"
+                            id="urna_conmemorativa"
+                            data-price="3450"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="urna_conmemorativa"
+                          >
+                            Urna Conmemorativa – $3,450 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2 extra-opcion d-none">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_cremacion"
+                            id="urna_azul_celeste_nacar"
+                            data-price="3890"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="urna_azul_celeste_nacar"
+                          >
+                            Urna Azul Celeste Nácar – $3,890 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2 extra-opcion d-none">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_cremacion"
+                            id="urna_bosque_sagrado"
+                            data-price="4150"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="urna_bosque_sagrado"
+                          >
+                            Urna Bosque Sagrado – $4,150 MXN
+                          </label>
+                        </div>
+
+                        <div class="form-check mb-2 extra-opcion d-none">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contenedor_cremacion"
+                            id="urna_constelacion_nocturna"
+                            data-price="4490"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="urna_constelacion_nocturna"
+                          >
+                            Urna Constelación Nocturna – $4,490 MXN
+                          </label>
+                        </div>
+
+                        <p class="small mt-2">
+                          <button
+                            type="button"
+                            class="btn btn-link p-0 link-dark text-decoration-underline"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalCatalogoUrnas"
+                          >
+                            Ver catálogo completo de urnas
+                          </button>
+                        </p>
+                      </div>
+
+                      <button
+                        type="button"
+                        class="btn btn-primary mt-3 btn-next-step"
+                        disabled
+                      >
+                        Continuar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Paso 3: Traslado -->
+                <div
+                  class="accordion-item plan-step ux-float"
+                  data-step-label="Traslado"
+                  data-next-step="step4Content"
+                  data-float-y="10"
+                  data-float-duration="2"
+                >
+                  <h2 class="accordion-header" id="heading3">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#step3Content"
+                      aria-expanded="false"
+                      aria-controls="step3Content"
+                    >
+                      3. Traslado
+                    </button>
+                  </h2>
+                  <div
+                    id="step3Content"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="heading3"
+                    data-bs-parent="#planAccordion"
+                  >
+                    <div class="accordion-body">
+                      <div class="form-check mb-2">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="traslado"
+                          id="sin_traslado"
+                          data-price="0"
+                        />
+                        <label class="form-check-label" for="sin_traslado">
+                          Sin traslado adicional – incluido
+                        </label>
+                      </div>
+
+                      <div class="form-check mb-2">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="traslado"
+                          id="traslado_local"
+                          data-price="2500"
+                        />
+                        <label class="form-check-label" for="traslado_local">
+                          Traslado local – $2,500 MXN
+                        </label>
+                      </div>
+
+                      <div class="form-check mb-2">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="traslado"
+                          id="traslado_foraneo"
+                          data-price="6000"
+                        />
+                        <label class="form-check-label" for="traslado_foraneo">
+                          Traslado foráneo – $6,000 MXN
+                        </label>
+                      </div>
+
+                      <button
+                        type="button"
+                        class="btn btn-primary mt-3 btn-next-step"
+                        disabled
+                      >
+                        Continuar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Paso 4: Música -->
+                <div
+                  class="accordion-item plan-step ux-float"
+                  data-step-label="Música"
+                  data-next-step="step5Content"
+                  data-float-y="10"
+                  data-float-duration="2"
+                >
+                  <h2 class="accordion-header" id="heading4">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#step4Content"
+                      aria-expanded="false"
+                      aria-controls="step4Content"
+                    >
+                      4. Música
+                    </button>
+                  </h2>
+                  <div
+                    id="step4Content"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="heading4"
+                    data-bs-parent="#planAccordion"
+                  >
+                    <div class="accordion-body">
+                      <div class="form-check mb-2">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="musica"
+                          id="sin_musica"
+                          data-price="0"
+                        />
+                        <label class="form-check-label" for="sin_musica">
+                          Sin música adicional – incluido
+                        </label>
+                      </div>
+
+                      <div class="form-check mb-2">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="musica"
+                          id="musica_reproductor"
+                          data-price="1500"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="musica_reproductor"
+                        >
+                          Música ambiental (reproductor) – $1,500 MXN
+                        </label>
+                      </div>
+
+                      <div class="form-check mb-2">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="musica"
+                          id="musica_en_vivo"
+                          data-price="4000"
+                        />
+                        <label class="form-check-label" for="musica_en_vivo">
+                          Música en vivo – $4,000 MXN
+                        </label>
+                      </div>
+
+                      <button
+                        type="button"
+                        class="btn btn-primary mt-3 btn-next-step"
+                        disabled
+                      >
+                        Continuar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Paso 5: Flores -->
+                <div
+                  class="accordion-item plan-step ux-float"
+                  data-step-label="Flores"
+                  data-next-step="step6Content"
+                  data-float-y="10"
+                  data-float-duration="2"
+                >
+                  <h2 class="accordion-header" id="heading5">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#step5Content"
+                      aria-expanded="false"
+                      aria-controls="step5Content"
+                    >
+                      5. Flores
+                    </button>
+                  </h2>
+                  <div
+                    id="step5Content"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="heading5"
+                    data-bs-parent="#planAccordion"
+                  >
+                    <div class="accordion-body">
+                      <div class="form-check mb-2">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flores"
+                          id="sin_flores"
+                          data-price="0"
+                        />
+                        <label class="form-check-label" for="sin_flores">
+                          Sin arreglos florales adicionales
+                        </label>
+                      </div>
+
+                      <div class="form-check mb-2">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flores"
+                          id="arreglo_sencillo"
+                          data-price="2000"
+                        />
+                        <label class="form-check-label" for="arreglo_sencillo">
+                          Arreglo sencillo – $2,000 MXN
+                        </label>
+                      </div>
+
+                      <div class="form-check mb-2">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flores"
+                          id="arreglo_premium"
+                          data-price="4500"
+                        />
+                        <label class="form-check-label" for="arreglo_premium">
+                          Arreglo premium – $4,500 MXN
+                        </label>
+                      </div>
+
+                      <button
+                        type="button"
+                        class="btn btn-primary mt-3 btn-next-step"
+                        disabled
+                      >
+                        Continuar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Paso 6: Atención personalizada (checklist) -->
+                <div
+                  class="accordion-item plan-step ux-float"
+                  data-step-label="Atención personalizada"
+                  data-float-y="10"
+                  data-float-duration="2"
+                >
+                  <h2 class="accordion-header" id="heading6">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#step6Content"
+                      aria-expanded="false"
+                      aria-controls="step6Content"
+                    >
+                      6. Atención personalizada y extras
+                    </button>
+                  </h2>
+                  <div
+                    id="step6Content"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="heading6"
+                    data-bs-parent="#planAccordion"
+                  >
+                    <div class="accordion-body">
+                      <p class="small text-muted mb-2">
+                        Estos servicios son opcionales, puedes elegir más de
+                        uno.
+                      </p>
+
+                      <div class="form-check mb-2">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="extra_gestor"
+                          data-price="1800"
+                        />
+                        <label class="form-check-label" for="extra_gestor">
+                          Gestoría de trámites – $1,800 MXN
+                        </label>
+                      </div>
+
+                      <div class="form-check mb-2">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="extra_cafe"
+                          data-price="900"
+                        />
+                        <label class="form-check-label" for="extra_cafe">
+                          Servicio de café y bebidas – $900 MXN
+                        </label>
+                      </div>
+
+                      <div class="form-check mb-2">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="extra_sala_vip"
+                          data-price="3500"
+                        />
+                        <label class="form-check-label" for="extra_sala_vip">
+                          Sala VIP – $3,500 MXN
+                        </label>
+                      </div>
+
+                      <button type="button" class="btn btn-success mt-3 w-100">
+                        Plan listo (puedes revisar el resumen a la derecha)
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Columna derecha: resumen y total -->
+            <div class="col-lg-4">
+              <div
+                class="texto_c resumen-plan ux-float"
+                data-float-y="20"
+                data-float-duration="2"
+              >
+                <h3 class="h5 mb-3">Resumen de tu plan</h3>
+                <ul id="planSummary" class="list-unstyled small mb-3">
+                  <li class="text-muted">Aún no has seleccionado opciones.</li>
+                </ul>
+                <hr />
+                <p class="mb-1 small text-muted">Total estimado:</p>
+                <p class="h4 mb-3"><span id="planTotal">$0.00</span> MXN</p>
+                <button
+                  type="button"
+                  class="btn-contacto w-100"
+                  id="btnPlanPersonalizado"
+                >
+                  Simular pago y contrato (plan personalizado)
+                </button>
+                <p class="small text-muted mt-2">
+                  En la sección de contacto podremos afinar detalles específicos
+                  de tu plan.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /container mt-5 -->
+      </div>
+      <!-- /container principal -->
+    </section>
+
+    <!-- MODAL: Catálogo de Ataúdes -->
+    <div
+      class="modal fade"
+      id="modalCatalogoAtaudes"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h5 class="modal-title mb-0">Catálogo de ataúdes</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+
+          <div class="modal-body bg-transparent">
+            <section class="ataudes-section py-3">
+              <div class="container">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-4"
+                >
+                  <h2 class="ataudes-title m-0">Ataúdes disponibles</h2>
+                </div>
+
+                <div class="contenedor-ataudes row g-4 ataudes-grid">
+                  <!-- Card 1 -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-ataud">
+                      <img
+                        class="img-ataud"
+                        src="../../assets/img/ataudes/clasico-nogal.png"
+                        alt="Ataúd Clásico Nogal"
+                      />
+                      <div class="textBox textBox-ataud">
+                        <p class="head">Ataúd Clásico Nogal</p>
+                        <p class="discription">
+                          Madera noble • acabado brillante
+                        </p>
+                        <p class="price">$18,900 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 2 -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-ataud">
+                      <img
+                        class="img-ataud"
+                        src="../../assets/img/ataudes/moderno-minimalista.png"
+                        alt="Ataúd Moderno Minimalista"
+                      />
+                      <div class="textBox textBox-ataud">
+                        <p class="head">Ataúd Moderno Minimalista</p>
+                        <p class="discription">Líneas limpias • tono mate</p>
+                        <p class="price">$21,500 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 3 -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-ataud">
+                      <img
+                        class="img-ataud"
+                        src="../../assets/img/ataudes/ecologico.png"
+                        alt="Ataúd Ecológico"
+                      />
+                      <div class="textBox textBox-ataud">
+                        <p class="head">Ataúd Ecológico</p>
+                        <p class="discription">
+                          Biodegradable • acabado natural
+                        </p>
+                        <p class="price">$15,700 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 4 -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-ataud">
+                      <img
+                        class="img-ataud"
+                        src="../../assets/img/ataudes/marmol-premium.png"
+                        alt="Ataúd Premium Mármol"
+                      />
+                      <div class="textBox textBox-ataud">
+                        <p class="head">Ataúd Premium Marmol</p>
+                        <p class="discription">
+                          Acabados de lujo • interior acolchado
+                        </p>
+                        <p class="price">$29,800 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 5 -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-ataud">
+                      <img
+                        class="img-ataud"
+                        src="../../assets/img/ataudes/metalico.png"
+                        alt="Ataúd Metálico"
+                      />
+                      <div class="textBox textBox-ataud">
+                        <p class="head">Ataúd Metálico</p>
+                        <p class="discription">
+                          Acero sellado • alta resistencia
+                        </p>
+                        <p class="price">$24,300 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 6 -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-ataud">
+                      <img
+                        class="img-ataud"
+                        src="../../assets/img/ataudes/conmemorativo.png"
+                        alt="Ataúd Conmemorativo"
+                      />
+                      <div class="textBox textBox-ataud">
+                        <p class="head">Ataúd Conmemorativo</p>
+                        <p class="discription">
+                          Grabado personalizado • herrajes dorados
+                        </p>
+                        <p class="price">$26,900 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 7 -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-ataud">
+                      <img
+                        class="img-ataud"
+                        src="../../assets/img/ataudes/roble-imperial.png"
+                        alt="Ataúd Roble Imperial"
+                      />
+                      <div class="textBox textBox-ataud">
+                        <p class="head">Ataúd Roble Imperial</p>
+                        <p class="discription">Roble sólido • barniz oscuro</p>
+                        <p class="price">$19,700 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 8 -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-ataud">
+                      <img
+                        class="img-ataud"
+                        src="../../assets/img/ataudes/serinity.png"
+                        alt="Ataúd Blanco Serenity"
+                      />
+                      <div class="textBox textBox-ataud">
+                        <p class="head">Ataúd Blanco Serenity</p>
+                        <p class="discription">
+                          Acabado blanco satinado • interior perla
+                        </p>
+                        <p class="price">$22,300 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 9 -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-ataud">
+                      <img
+                        class="img-ataud"
+                        src="../../assets/img/ataudes/ecologico-bambu.png"
+                        alt="Ataúd Ecológico Bambú"
+                      />
+                      <div class="textBox textBox-ataud">
+                        <p class="head">Ataúd Ecológico Bambú</p>
+                        <p class="discription">Bambú natural • biodegradable</p>
+                        <p class="price">$16,400 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 10 -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-ataud">
+                      <img
+                        class="img-ataud"
+                        src="../../assets/img/ataudes/celestial-azul.png"
+                        alt="Ataúd Celestial Azul"
+                      />
+                      <div class="textBox textBox-ataud">
+                        <p class="head">Ataúd Celestial Azul</p>
+                        <p class="discription">
+                          Tono azul profundo • herrajes cromados
+                        </p>
+                        <p class="price">$25,600 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 11 -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-ataud">
+                      <img
+                        class="img-ataud"
+                        src="../../assets/img/ataudes/titanio.png"
+                        alt="Ataúd Metálico Titanio"
+                      />
+                      <div class="textBox textBox-ataud">
+                        <p class="head">Ataúd Metálico Titanio</p>
+                        <p class="discription">
+                          Metal sellado • acabado titanio mate
+                        </p>
+                        <p class="price">$27,900 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 12 -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-ataud">
+                      <img
+                        class="img-ataud"
+                        src="../../assets/img/ataudes/artesanal-tallado.png"
+                        alt="Ataúd Artesanal Tallado"
+                      />
+                      <div class="textBox textBox-ataud">
+                        <p class="head">Ataúd Artesanal Tallado</p>
+                        <p class="discription">
+                          Detalles a mano • estilo tradicional
+                        </p>
+                        <p class="price">$23,850 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 13 (Aurora) -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-ataud">
+                      <img
+                        class="img-ataud"
+                        src="../../assets/img/ataudes/conmemorativo-aurora.png"
+                        alt="Ataúd Conmemorativo Aurora"
+                      />
+                      <div class="textBox textBox-ataud">
+                        <p class="head">Ataúd Conmemorativo Aurora</p>
+                        <p class="discription">
+                          Grabado personalizado • interior acolchado premium
+                        </p>
+                        <p class="price">$28,500 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- OJO: NO incluimos la carta "Próximamente" en el modal -->
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="modal-footer bg-dark">
+            <small class="text-muted me-auto">
+              Para seleccionar un ataúd en tu plan, usa las opciones del paso 2
+              del configurador.
+            </small>
+            <button
+              type="button"
+              class="btn btn-outline-light btn-sm"
+              data-bs-dismiss="modal"
+            >
+              Cerrar catálogo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: Catálogo de Urnas -->
+    <div
+      class="modal fade"
+      id="modalCatalogoUrnas"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h5 class="modal-title mb-0">Catálogo de urnas</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+
+          <div class="modal-body bg-transparent">
+            <section class="urnas-section py-3">
+              <div class="container">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-4"
+                >
+                  <h2 class="urnas-title m-0">Urnas disponibles</h2>
+                </div>
+
+                <div class="contenedor-urnas row g-5">
+                  <!-- Card 1 -->
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card-urna">
+                      <img
+                        class="img-urna"
+                        src="../../assets/img/urnas/clasica.png"
+                        alt="Urna clásica"
+                      />
+                      <div class="textBox">
+                        <p class="head">Urna Clásica</p>
+                        <p class="discription">Madera barnizada</p>
+                        <p class="price">$2,450 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 2 -->
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card-urna">
+                      <img
+                        class="img-urna"
+                        src="../../assets/img/urnas/moderna.png"
+                        alt="Urna moderna"
+                      />
+                      <div class="textBox">
+                        <p class="head">Urna Moderna</p>
+                        <p class="discription">Cerámica blanca</p>
+                        <p class="price">$3,100 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 3 -->
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card-urna">
+                      <img
+                        class="img-urna"
+                        src="../../assets/img/urnas/ecologica.png"
+                        alt="Urna ecológica"
+                      />
+                      <div class="textBox">
+                        <p class="head">Urna Ecológica</p>
+                        <p class="discription">Biodegradable</p>
+                        <p class="price">$1,980 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 4 -->
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card-urna">
+                      <img
+                        class="img-urna"
+                        src="../../assets/img/urnas/marmol.png"
+                        alt="Urna de mármol"
+                      />
+                      <div class="textBox">
+                        <p class="head">Urna de Mármol</p>
+                        <p class="discription">Acabado premium</p>
+                        <p class="price">$4,750 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 5 -->
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card-urna">
+                      <img
+                        class="img-urna"
+                        src="../../assets/img/urnas/artistica.png"
+                        alt="Urna artística"
+                      />
+                      <div class="textBox">
+                        <p class="head">Urna Artística</p>
+                        <p class="discription">Diseño pintado a mano</p>
+                        <p class="price">$3,990 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 6 -->
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card-urna">
+                      <img
+                        class="img-urna"
+                        src="../../assets/img/urnas/metalica.png"
+                        alt="Urna metálica"
+                      />
+                      <div class="textBox">
+                        <p class="head">Urna Metálica</p>
+                        <p class="discription">Aluminio cepillado</p>
+                        <p class="price">$2,890 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 7 -->
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card-urna">
+                      <img
+                        class="img-urna"
+                        src="../../assets/img/urnas/minimalista.png"
+                        alt="Urna minimalista"
+                      />
+                      <div class="textBox">
+                        <p class="head">Urna Minimalista</p>
+                        <p class="discription">Color negro mate</p>
+                        <p class="price">$2,200 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 8 -->
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card-urna">
+                      <img
+                        class="img-urna"
+                        src="../../assets/img/urnas/conmemorativa.png"
+                        alt="Urna conmemorativa"
+                      />
+                      <div class="textBox">
+                        <p class="head">Urna Conmemorativa</p>
+                        <p class="discription">Grabado personalizado</p>
+                        <p class="price">$3,450 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 9 -->
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card-urna">
+                      <img
+                        class="img-urna"
+                        src="../../assets/img/urnas/celeste-nacar.png"
+                        alt="Urna Azul Celeste Nácar"
+                      />
+                      <div class="textBox">
+                        <p class="head">Urna Azul Celeste Nácar</p>
+                        <p class="discription">Cerámica nacarada premium</p>
+                        <p class="price">$3,890 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 10 -->
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card-urna">
+                      <img
+                        class="img-urna"
+                        src="../../assets/img/urnas/bosque-sagrado.png"
+                        alt="Urna Bosque Sagrado"
+                      />
+                      <div class="textBox">
+                        <p class="head">Urna Bosque Sagrado</p>
+                        <p class="discription">Nogal con resina natural</p>
+                        <p class="price">$4,150 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 11 -->
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card-urna">
+                      <img
+                        class="img-urna"
+                        src="../../assets/img/urnas/constelacion-nocturna.png"
+                        alt="Urna Constelación Nocturna"
+                      />
+                      <div class="textBox">
+                        <p class="head">Urna Constelación Nocturna</p>
+                        <p class="discription">
+                          Metal satinado con constelaciones
+                        </p>
+                        <p class="price">$4,490 MXN</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="modal-footer bg-dark">
+            <small class="text-muted me-auto">
+              Para seleccionar una urna en tu plan, usa las opciones del paso 2
+              del configurador.
+            </small>
+            <button
+              type="button"
+              class="btn btn-outline-light btn-sm"
+              data-bs-dismiss="modal"
+            >
+              Cerrar catálogo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: Simulación de pago y contrato -->
+    <div
+      class="modal fade"
+      id="modalContratoPago"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content contrato-modal">
+          <div class="modal-header">
+            <h5 class="modal-title">Simulación de pago y contrato</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <!-- Resumen del plan/paquete -->
+            <div class="mb-3">
+              <h6 class="mb-1">Resumen del servicio</h6>
+              <p class="mb-0 small text-muted">Plan / paquete seleccionado:</p>
+              <p class="fw-semibold mb-0" id="contratoPlanNombre">
+                Plan seleccionado
+              </p>
+              <p class="mb-2">
+                Total estimado: <span id="contratoPlanPrecio">$0.00 MXN</span>
+              </p>
+            </div>
+
+            <hr />
+
+            <!-- Datos del contratante -->
+            <div class="mb-3">
+              <h6 class="mb-2">Datos del contratante</h6>
+              <div class="row g-2">
+                <div class="col-md-6">
+                  <label class="form-label small mb-1" for="contratoNombre"
+                    >Nombre completo</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="contratoNombre"
+                    placeholder="Nombre y apellidos"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small mb-1" for="contratoEmail"
+                    >Correo electrónico</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control form-control-sm"
+                    id="contratoEmail"
+                    placeholder="correo@ejemplo.com"
+                  />
+                </div>
+                <div class="col-md-6 mt-2">
+                  <label class="form-label small mb-1" for="contratoTelefono"
+                    >Teléfono</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control form-control-sm"
+                    id="contratoTelefono"
+                    placeholder="10 dígitos"
+                  />
+                </div>
+                <div class="col-md-6 mt-2">
+                  <label class="form-label small mb-1" for="contratoDireccion"
+                    >Dirección (opcional)</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="contratoDireccion"
+                    placeholder="Calle, número, colonia"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <hr />
+
+            <!-- Métodos de pago -->
+            <div class="mb-3">
+              <h6 class="mb-2">Elige un método de pago (simulado)</h6>
+
+              <div class="list-group" id="metodosPagoLista">
+                <label class="list-group-item list-group-item-action py-2">
+                  <input
+                    class="form-check-input me-2"
+                    type="radio"
+                    name="metodo_pago"
+                    value="tarjeta"
+                  />
+                  Tarjeta de crédito / débito
+                </label>
+                <label class="list-group-item list-group-item-action py-2">
+                  <input
+                    class="form-check-input me-2"
+                    type="radio"
+                    name="metodo_pago"
+                    value="efectivo"
+                  />
+                  Efectivo en sucursal (recibo simulado)
+                </label>
+                <label class="list-group-item list-group-item-action py-2">
+                  <input
+                    class="form-check-input me-2"
+                    type="radio"
+                    name="metodo_pago"
+                    value="tienda"
+                  />
+                  Pago en tiendas de autoservicio
+                </label>
+                <label class="list-group-item list-group-item-action py-2">
+                  <input
+                    class="form-check-input me-2"
+                    type="radio"
+                    name="metodo_pago"
+                    value="paypal"
+                  />
+                  PayPal (simulado)
+                </label>
+                <label class="list-group-item list-group-item-action py-2">
+                  <input
+                    class="form-check-input me-2"
+                    type="radio"
+                    name="metodo_pago"
+                    value="transferencia"
+                  />
+                  Transferencia bancaria
+                </label>
+                <label class="list-group-item list-group-item-action py-2">
+                  <input
+                    class="form-check-input me-2"
+                    type="radio"
+                    name="metodo_pago"
+                    value="binance"
+                  />
+                  Binance / Cripto (simulado)
+                </label>
+              </div>
+
+              <!-- Detalle dinámico según método -->
+              <div id="pagoDetalle" class="mt-3 small"></div>
+            </div>
+
+            <hr />
+
+            <!-- Contrato generado -->
+            <div class="mb-2">
+              <h6 class="mb-2">Contrato simulado</h6>
+              <p class="small text-muted mb-1">
+                El contrato se generará automáticamente cuando confirmes el pago
+                simulado.
+              </p>
+              <div
+                id="textoContrato"
+                class="contrato-caja small border rounded p-3"
+              >
+                Aún no se ha generado el contrato. Completa los datos y confirma
+                el pago simulado.
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer d-flex justify-content-between">
+            <!-- Botón cancelar / cerrar modal -->
+            <button
+              type="button"
+              class="btn btn-outline-secondary btn-sm"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+
+            <!-- Botón confirmar pago -->
+            <button
+              type="button"
+              class="btn btn-primary btn-sm"
+              id="btnConfirmarPagoSimulado"
+            >
+              Confirmar pago simulado y generar contrato
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-white py-4">
+      <div class="container-fluid">
+        <div class="row text-center">
+          <div class="col-12 col-md-4 mb-3">
+            <h5 class="fw-bold">Encuéntranos</h5>
+            <p>Colonia Las Rosas<br />Av Paseo Norte CP 79100</p>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <h5 class="fw-bold">Contáctanos</h5>
+            <p>481-132-7854<br />444-152-9091</p>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <h5 class="fw-bold">Correo</h5>
+            <p><strong>serviciosfunerarios.me@gmail.com</strong></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="../../shared/ux-breath.js"></script>
+    <!-- SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Script general -->
+    <script src="../../shared/script.js"></script>
+    <!-- Script de planeación (acordeón y total) -->
+    <script src="planeacion.js"></script>
+    <!-- Simulación de pago y contrato (el mismo que ya usas en paquetes, puedes copiarlo a esta carpeta) -->
+    <script src="../../shared/contrato-pago.js"></script>
+  </body>
+</html>

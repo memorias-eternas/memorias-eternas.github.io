@@ -1,0 +1,422 @@
+/* ==========================================================================
+   ====== INTRODUCCIÓN (URNAS / ATAÚDES) ======
+   ========================================================================== */
+.introduccion {
+  padding: 30px;
+  min-height: 100px;
+  background: transparent;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+
+.introduccion p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #444444; /* Gris de lectura legible */
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0 auto 1rem auto;
+}
+
+/* Contenedores de productos */
+.contenedor-urnas,
+.contenedor-ataudes {
+  padding: 35px;
+}
+
+/* ==========================================================================
+   ====== BOTÓN CONTACTO (Consistente con otras secciones) ======
+   ========================================================================== */
+.btn-contacto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.4rem;
+  background: #111111; /* Negro elegante sólido */
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.btn-contacto:hover {
+  background: transparent;
+  color: #111111;
+  border-color: #111111;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   ====== SECCIONES DE CATÁLOGO (URNAS / ATAÚDES) ======
+   ========================================================================== */
+.urnas-section,
+.ataudes-section {
+  background: transparent;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+
+.urnas-title,
+.ataudes-title {
+  color: #111111; /* Negro elegante */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   ====== CARDS BASE (URNAS / ATAÚDES) ======
+   ========================================================================== */
+.card-urna,
+.card-ataud {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.75); /* Glassmorphism Claro Premium */
+  border-radius: 20px;
+  color: #111111; /* Color base negro */
+  transition: 0.25s ease-in-out;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08); /* Borde fino sutil */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Configuración específica para URNAS */
+.card-urna {
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Configuración específica para ATAÚDES */
+.card-ataud {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover compartido (Enfoque Púrpura de Marca) */
+.card-urna:hover,
+.card-ataud:hover {
+  transform: translateY(-10px) scale(1.05);
+  border-color: rgba(164, 148, 185, 0.6); /* Borde Púrpura sutil */
+  box-shadow: 0 12px 28px rgba(164, 148, 185, 0.15);
+}
+
+/* ====== IMÁGENES DENTRO DE LAS CARDS ====== */
+.img-urna,
+.img-ataud {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  transition: 0.25s ease-in-out;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   ====== TEXTOS OVERLAY URNAS ======
+   ========================================================================== */
+.textBox {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+  gap: 0em;
+  padding: 1em;
+  z-index: 5;
+  transition: 0.5s ease-in-out;
+  color: #ffffff;
+
+  /* CORREGIDO: Gradiente corregido (100% en lugar de 100__) para rescatar legibilidad */
+  background: linear-gradient(
+    to top,
+    rgba(17, 17, 17, 0.9) 0%,
+    rgba(17, 17, 17, 0.4) 50%,
+    rgba(17, 17, 17, 0) 100%
+  );
+}
+
+.textBox > .head {
+  font-size: 1.05em;
+  font-weight: 700;
+}
+
+.textBox > .price {
+  font-size: 1em;
+  font-weight: 700;
+  color: hsla(265, 55%, 86%, 1); /* Precio en lavanda pastel */
+}
+
+.textBox > .discription {
+  font-size: 0.85em;
+  color: #e4e4e4; /* Blanco grisáceo suave */
+  font-weight: 300;
+}
+
+/* Hover URNAS */
+.card-urna:hover > .textBox {
+  opacity: 1;
+  gap: 0.5em;
+}
+
+.card-urna:hover > .img-urna {
+  filter: blur(2px) brightness(0.85);
+  animation: anim 3s infinite ease-in-out;
+}
+
+@keyframes anim {
+  50% {
+    transform: translateY(-3%) rotate(1deg);
+  }
+}
+
+/* ==========================================================================
+   ====== TEXTOS OVERLAY ATAÚDES ======
+   ========================================================================== */
+.textBox-ataud {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  z-index: 5;
+  transition: 0.5s ease-in-out;
+  color: #ffffff;
+
+  /* Gradiente oscuro optimizado para texto */
+  background: linear-gradient(
+    to top,
+    rgba(17, 17, 17, 0.9) 0%,
+    rgba(17, 17, 17, 0.4) 50%,
+    rgba(17, 17, 17, 0) 100%
+  );
+}
+
+/* Hover ATAÚDES */
+.card-ataud:hover > .textBox-ataud {
+  opacity: 1;
+  gap: 0.5em;
+}
+
+.card-ataud:hover > .img-ataud {
+  filter: blur(2px) brightness(0.85);
+  animation: anim-ataud 3s infinite ease-in-out;
+}
+
+@keyframes anim-ataud {
+  50% {
+    transform: translateY(-2%) scale(1.01);
+  }
+}
+
+/* ==========================================================================
+   ====== RESPONSIVE GENERAL ======
+   ========================================================================== */
+@media (max-width: 576px) {
+  .introduccion p {
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+  }
+
+  .contenedor-urnas,
+  .contenedor-ataudes {
+    padding: 15px;
+  }
+
+  .card-urna {
+    height: 280px;
+    border-radius: 16px;
+  }
+
+  .card-ataud {
+    height: 190px;
+    border-radius: 16px;
+  }
+
+  .textBox > .head {
+    font-size: 1em;
+  }
+
+  .textBox > .discription {
+    font-size: 0.8em;
+  }
+
+  .textBox > .price {
+    font-size: 0.95em;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-urna {
+    height: 340px;
+  }
+
+  .card-ataud {
+    height: 240px;
+  }
+}
+
+/* ==========================================================================
+   ====== MODAL DETALLE DE PRODUCTOS ======
+   ========================================================================== */
+.modal-producto {
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.98); /* Fondo claro limpio */
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #111111;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Subsecciones internas del modal */
+.modal-producto .modal-header,
+.modal-producto .modal-body,
+.modal-producto .modal-footer {
+  background: transparent;
+  border-color: rgba(0, 0, 0, 0.06);
+  color: #111111;
+  padding: 1.5rem;
+}
+
+/* Título superior */
+.modal-producto .modal-title {
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: 0.3px;
+}
+
+/* Botón de cerrar (X) */
+.modal-producto .btn-close {
+  filter: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.modal-producto .btn-close:hover {
+  opacity: 1;
+}
+
+/* --- CORRECCIÓN MARCO E IMAGEN DEL MODAL --- */
+.modal-producto-imagen-wrapper {
+  height: 350px; /* Definimos una altura fija para el contenedor */
+  border-radius: 16px;
+  overflow: hidden;
+  background: radial-gradient(
+    circle at top,
+    #fafafa,
+    #eaeaea
+  ); /* Fondo de estudio */
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-producto-imagen-wrapper img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* Cambia a 'contain' si no quieres que se recorte nada de la foto de la urna */
+}
+
+/* --- DISTRIBUCIÓN COLUMNA DERECHA (TEXTOS Y BOTÓN) --- */
+.modal-producto .col-md-6:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Alineación vertical central */
+  padding-left: 2rem;
+}
+
+/* Nombre o Material */
+.modal-producto-descripcion {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 0.5rem;
+}
+
+/* Párrafo de detalles extendidos */
+.modal-producto-detalle {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444444; /* Gris sutil */
+  margin-bottom: 1rem;
+}
+
+/* Precio destacado */
+.modal-producto-precio {
+  font-size: 1.5rem;
+  color: rgb(164, 148, 185); /* Púrpura de marca */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+/* --- BOTONES DE ACCIÓN DENTRO DEL MODAL --- */
+
+/* Botón principal (Comprar / Cotizar) */
+.modal-producto .btn-primary {
+  background: #111111; /* Negro elegante a juego con .btn-contacto */
+  border: 2px solid transparent;
+  color: #ffffff;
+  border-radius: 12px;
+  font-weight: 700;
+  padding: 0.8rem 1.5rem;
+  width: 100%;
+  max-width: 280px; /* Evita sobre-estiramiento */
+  transition: 0.2s ease-in-out;
+}
+
+.modal-producto .btn-primary:hover {
+  background: transparent;
+  border-color: #111111;
+  color: #111111;
+  transform: translateY(-2px);
+}
+
+/* Botón secundario */
+.modal-producto .btn-secondary {
+  background: transparent;
+  border-color: rgb(164, 148, 185);
+  color: #111111;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+}
+
+.modal-producto .btn-secondary:hover {
+  background: rgba(164, 148, 185, 0.05);
+  color: rgb(164, 148, 185);
+}
+
+/* --- RESPONSIVE MODAL --- */
+@media (max-width: 768px) {
+  .modal-producto-imagen-wrapper {
+    height: 280px; /* Reduce el tamaño en pantallas móviles */
+  }
+
+  .modal-producto .col-md-6:last-child {
+    padding-left: 1rem;
+    padding-top: 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .modal-producto .btn-primary {
+    max-width: 100%;
+  }
+}

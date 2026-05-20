@@ -1,0 +1,264 @@
+/* ====== PAQUETES FUNERARIOS / PRICING ====== */
+.pricing-section {
+  background: transparent;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+
+/* Card base - De café/oro a Glassmorphism Claro y Limpio */
+.pricing-card {
+  position: relative;
+  height: 100%;
+  min-height: 650px;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 1.5rem;
+
+  /* Modificado: Fondo claro premium consistente */
+  background: rgba(255, 255, 255, 0.75);
+  /* Modificado: Borde sutil oscuro */
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+
+  color: #111111; /* Modificado: Texto en negro elegante */
+  text-align: center;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition: 0.25s ease-in-out;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover elegante sin dorado */
+.pricing-card:hover {
+  transform: translateY(-20px);
+  /* Modificado: Brillo púrpura suave al pasar el cursor */
+  border-color: rgba(164, 148, 185, 0.6);
+  box-shadow: 0 12px 28px rgba(164, 148, 185, 0.15);
+}
+
+/* Card destacada (intermedio) - Enfoque Púrpura/Lavanda */
+.pricing-card.featured {
+  /* Modificado: Destacado usando el borde de marca */
+  border-color: rgb(164, 148, 185);
+  background: rgba(255, 255, 255, 0.85);
+  transform: scale(1.02);
+}
+
+/* Que en hover se sienta un poco más destacada */
+.pricing-card.featured:hover {
+  transform: translateY(-22px) scale(1.03);
+  border-color: rgba(164, 148, 185, 0.9);
+}
+
+/* Badge superior */
+.plan-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  /* Modificado: Fondo lavanda pastel con texto negro elegante */
+  background: hsla(265, 55%, 86%, 1);
+  color: #111111;
+  font-weight: 600;
+}
+
+/* Títulos y textos */
+.plan-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  color: #111111; /* Modificado: Negro elegante */
+  letter-spacing: 0.8px;
+}
+
+.plan-description {
+  font-size: 0.95rem;
+  color: #444444; /* Modificado: Gris oscuro legible */
+  margin-bottom: 1.4rem;
+  text-align: start;
+  line-height: 1.5;
+  padding-left: 1rem;
+}
+
+/* Lista con estilo tipo planeación */
+.plan-list {
+  margin: 0 0 1.6rem 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.6rem;
+  text-align: start;
+  flex-grow: 1;
+}
+
+/* Modificado: El checkmark ahora es púrpura marca, eliminando el dorado */
+.plan-list li::before {
+  content: "✓";
+  margin-right: 8px;
+  color: rgb(164, 148, 185);
+  font-weight: 700;
+}
+
+/* Precio */
+.plan-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111111; /* Modificado: Negro */
+  margin-top: 0.5rem;
+  margin-bottom: 1.4rem;
+}
+
+.plan-price span {
+  font-size: 1rem;
+  color: #666666; /* Modificado: Gris intermedio */
+  font-weight: 400;
+}
+
+/* Botón - De oro viejo a Lavanda Pastel sólido */
+.plan-button {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+
+  /* Modificado: Lavanda pastel institucional */
+  background: hsla(265, 55%, 86%, 1);
+  color: #111111;
+  border: 2px solid transparent;
+
+  transition: 0.2s ease-in-out;
+  margin-top: auto;
+}
+
+.plan-button:hover {
+  background: transparent;
+  color: rgb(164, 148, 185);
+  border-color: rgb(164, 148, 185);
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   ESTILO DEL MODAL CONTRATO (Limpio y claro)
+   =========================== */
+
+/* Fondo detrás del modal */
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Caja principal del modal */
+.contrato-modal {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.95
+  ); /* Modificado: Fondo claro premium */
+  color: #111111; /* Modificado: Texto negro */
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Bordes internos */
+.contrato-modal .modal-header,
+.contrato-modal .modal-body,
+.contrato-modal .modal-footer {
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+/* Título */
+.contrato-modal .modal-title {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #111111;
+}
+
+/* Inputs consistentes con la marca */
+.contrato-modal .form-control,
+.contrato-modal .form-select {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: #111111;
+  font-size: 0.9rem;
+}
+
+.contrato-modal .form-control::placeholder {
+  color: #888888;
+}
+
+.contrato-modal .form-control:focus {
+  border-color: hsla(260, 45%, 82%, 1);
+  box-shadow: 0 0 0 3px rgba(164, 148, 185, 0.3);
+}
+
+/* Lista de métodos de pago */
+.contrato-modal .list-group-item {
+  background-color: #ffffff;
+  border-color: rgba(0, 0, 0, 0.06);
+  color: #111111;
+}
+
+.contrato-modal .list-group-item:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Radios / Checkboxes púrpuras */
+.contrato-modal .form-check-input {
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+.contrato-modal .form-check-input:checked {
+  background-color: rgb(164, 148, 185);
+  border-color: rgb(164, 148, 185);
+}
+
+/* Caja donde se muestra el contrato en pantalla */
+.contrato-caja {
+  background-color: #fafafa;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  color: #444444;
+}
+
+/* Botones del Modal */
+.contrato-modal .btn-outline-secondary {
+  border-color: rgb(164, 148, 185);
+  color: #111111;
+}
+
+.contrato-modal .btn-outline-secondary:hover {
+  background-color: rgba(164, 148, 185, 0.05);
+  color: rgb(164, 148, 185);
+}
+
+.contrato-modal .btn-primary {
+  background-color: hsla(265, 55%, 86%, 1); /* Modificado a lavanda pastel */
+  border-color: transparent;
+  color: #111111;
+  font-weight: 600;
+}
+
+.contrato-modal .btn-primary:hover {
+  background-color: transparent;
+  border-color: rgb(164, 148, 185);
+  color: rgb(164, 148, 185);
+}

@@ -1,0 +1,523 @@
+/* ====== SECTION PLANEACIÓN ====== */
+.planeacion-section {
+  background: transparent;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  padding: 60px 0 80px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.planeacion-title {
+  color: #111111;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.planeacion-sub {
+  color: #444444;
+  font-size: 1.05rem;
+  max-width: 650px;
+}
+
+/* ====== CARDS DE PLANES PREDEFINIDOS ====== */
+
+.card-plan {
+  position: relative;
+  padding: 2rem 1.5rem 1.8rem;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  color: #111111;
+  text-align: left;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: 0.25s ease-in-out;
+  height: 100%;
+  overflow: hidden;
+}
+
+.card-plan:hover {
+  transform: translateY(-4px);
+  border-color: rgba(164, 148, 185, 0.6);
+  box-shadow: 0 12px 28px rgba(164, 148, 185, 0.12);
+}
+
+.plan-badge {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: hsla(265, 55%, 86%, 1);
+  color: #111111;
+  font-weight: 600;
+}
+
+.plan-head h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: #111111;
+}
+
+.plan-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111111;
+}
+
+.plan-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.2rem 0 1.4rem;
+  font-size: 0.95rem;
+  color: #444444;
+}
+
+.plan-list li {
+  margin-bottom: 0.4rem;
+}
+
+/* Botón de los planes */
+.plan-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.4rem;
+  background: hsla(265, 55%, 86%, 1);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  color: #111111;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: 0.2s ease-in-out;
+}
+
+.plan-btn:hover {
+  background: transparent;
+  color: rgb(164, 148, 185);
+  border-color: rgb(164, 148, 185);
+  transform: translateY(-2px);
+}
+
+/* ====== BOTÓN CONTACTO ====== */
+.btn-contacto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.4rem;
+  background: #111111;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.btn-contacto:hover {
+  background: transparent;
+  color: #111111;
+  border-color: #111111;
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* Botón Plan Personalizado */
+#btnPlanPersonalizado {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border: 2px solid transparent !important;
+}
+
+#btnPlanPersonalizado:hover {
+  background-color: transparent !important;
+  color: #111111 !important;
+  border-color: #111111 !important;
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* Botón Continuar */
+.planeacion-section .btn-next-step {
+  background-color: hsla(265, 55%, 86%, 1);
+  border-color: transparent;
+  color: #111111;
+  border-radius: 999px;
+  font-weight: 600;
+  padding: 0.45rem 1.8rem;
+  box-shadow: 0 4px 12px rgba(164, 148, 185, 0.2);
+  transition: all 0.2s ease;
+}
+
+.planeacion-section .btn-next-step:not(:disabled):hover {
+  background-color: transparent;
+  border-color: rgb(164, 148, 185);
+  color: rgb(164, 148, 185);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(164, 148, 185, 0.3);
+}
+
+.planeacion-section .btn-next-step:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  background-color: #e0e0e0;
+  color: #888888;
+}
+
+/* Botón Success (Plan listo) */
+.planeacion-section .btn-success {
+  background-color: #111111 !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  border-radius: 999px;
+}
+
+.planeacion-section .btn-success:hover {
+  background-color: transparent !important;
+  border-color: #111111 !important;
+  color: #111111 !important;
+}
+
+/* ====== TEXTO GLASS / RESUMEN DERECHO ====== */
+.texto_c {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: 0.25s ease-in-out;
+  color: #111111;
+}
+
+.texto_c:hover {
+  transform: translateY(-4px);
+  border-color: rgba(164, 148, 185, 0.6);
+}
+
+.resumen-plan {
+  min-height: auto;
+}
+
+.resumen-plan h3 {
+  font-weight: 600;
+  color: #111111;
+}
+
+.resumen-plan .h4 {
+  font-weight: 700;
+  color: #111111;
+}
+
+@media (min-width: 992px) {
+  .resumen-plan {
+    position: sticky;
+    top: 90px;
+  }
+}
+
+/* ====== ACORDEÓN PLAN PERSONALIZADO ====== */
+.planeacion-section .accordion {
+  row-gap: 16px;
+  margin-top: 1.5rem;
+}
+
+.planeacion-section .accordion-item {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: 0.25s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+.planeacion-section .accordion-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(164, 148, 185, 0.5);
+}
+
+.planeacion-section .accordion-button {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.6),
+    rgba(0, 0, 0, 0.02)
+  );
+  color: #111111;
+  font-weight: 600;
+  border: none;
+  box-shadow: none;
+}
+
+.planeacion-section .accordion-button.collapsed {
+  background: rgba(255, 255, 255, 0.5);
+  color: #444444;
+}
+
+.planeacion-section .accordion-button::after {
+  filter: none;
+}
+
+.planeacion-section .accordion-button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.planeacion-section .accordion-body {
+  padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+  color: #444444;
+  font-size: 0.95rem;
+}
+
+/* ====== OPCIONES DEL PLAN ====== */
+.planeacion-section .form-check {
+  margin-bottom: 0.6rem;
+}
+
+.planeacion-section .form-check-input {
+  cursor: pointer;
+  margin-top: 0;
+}
+
+.planeacion-section .form-check-label {
+  display: inline-block;
+  width: 100%;
+  padding: 0.45rem 0.75rem;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.02);
+  color: #444444;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.planeacion-section .form-check:hover .form-check-label {
+  background: rgba(164, 148, 185, 0.08);
+  color: #111111;
+}
+
+.planeacion-section .form-check-input:checked {
+  background-color: rgb(164, 148, 185);
+  border-color: rgb(164, 148, 185);
+}
+
+.planeacion-section .form-check-input:checked + .form-check-label {
+  background: rgba(164, 148, 185, 0.15);
+  color: #111111;
+  font-weight: 600;
+  box-shadow: 0 0 0 1px rgba(164, 148, 185, 0.3);
+  transform: translateY(-1px);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+}
+
+.planeacion-section .small,
+.planeacion-section small {
+  color: #666666 !important;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 767.98px) {
+  .planeacion-section {
+    padding-inline: 15px;
+  }
+  .planeacion-title {
+    font-size: 1.6rem;
+  }
+  .card-plan {
+    padding: 1.5rem 1.3rem;
+  }
+}
+
+/* ====== IMPRESIÓN ====== */
+@media print {
+  body {
+    background: #ffffff !important;
+  }
+  nav,
+  header,
+  footer,
+  .navbar,
+  .modal-header,
+  .modal-footer,
+  #pagoDetalle,
+  #metodosPagoLista,
+  .btn,
+  .swal-overlay {
+    display: none !important;
+  }
+  .modal,
+  .modal-dialog,
+  .modal-content,
+  .modal-body {
+    position: static !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: #ffffff !important;
+  }
+  #textoContrato {
+    max-height: none !important;
+    overflow: visible !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+    padding: 20mm !important;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+  #textoContrato .contrato-documento {
+    margin: 0 !important;
+  }
+  @page {
+    margin: 10mm;
+  }
+}
+
+.contrato-documento {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.contrato-documento p {
+  margin-bottom: 0.6rem;
+}
+
+.contrato-header .contrato-datos {
+  font-size: 0.8rem;
+}
+
+.contrato-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* ====== MODAL CONTRATO ====== */
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.contrato-modal {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #111111;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.contrato-modal .modal-header,
+.contrato-modal .modal-body,
+.contrato-modal .modal-footer {
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.contrato-modal .modal-title {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #111111;
+}
+
+.contrato-modal .form-control,
+.contrato-modal .form-select {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: #111111;
+  font-size: 0.9rem;
+}
+
+.contrato-modal .form-control::placeholder {
+  color: #888888;
+}
+
+.contrato-modal .form-control:focus {
+  border-color: hsla(260, 45%, 82%, 1);
+  box-shadow: 0 0 0 3px rgba(164, 148, 185, 0.3);
+}
+
+.contrato-modal .list-group-item {
+  background-color: #ffffff;
+  border-color: rgba(0, 0, 0, 0.06);
+  color: #111111;
+}
+
+.contrato-modal .list-group-item:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.contrato-modal .form-check-input {
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+.contrato-modal .form-check-input:checked {
+  background-color: rgb(164, 148, 185);
+  border-color: rgb(164, 148, 185);
+}
+
+.contrato-caja {
+  background-color: #fafafa;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  color: #444444;
+}
+
+.contrato-modal .btn-outline-secondary {
+  border-color: rgb(164, 148, 185);
+  color: #111111;
+}
+
+.contrato-modal .btn-outline-secondary:hover {
+  background-color: rgba(164, 148, 185, 0.05);
+  color: rgb(164, 148, 185);
+}
+
+.contrato-modal .btn-primary {
+  background-color: hsla(265, 55%, 86%, 1);
+  border-color: transparent;
+  color: #111111;
+  font-weight: 600;
+}
+
+.contrato-modal .btn-primary:hover {
+  background-color: transparent;
+  border-color: rgb(164, 148, 185);
+  color: rgb(164, 148, 185);
+}
+
+.btn-light {
+  text-decoration-line: none;
+  background-color: rgb(164, 148, 185);
+}
+
+/* Color para "Ver más" (el botón primario de acción) */
+.ver-mas-opciones.btn-outline-light {
+  color: #ffffff; /* Texto */
+  border-color: rgb(164, 148, 185); /* Color de tu marca */
+  background-color: hsla(265, 55%, 86%, 1);
+}
+
+.ver-mas-opciones.btn-outline-light:hover {
+  color: rgb(164, 148, 185);
+  background-color: #fff; /* Color para el efecto hover */
+  border-color: hsla(265, 55%, 86%, 1);
+}
+
+/* Busca el botón específicamente y cambia su color */
+.btn.btn-link.link-light {
+  color: #212529 !important; /* Sustituye este valor por el color de tu marca */
+}

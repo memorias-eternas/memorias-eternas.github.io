@@ -1,0 +1,361 @@
+header {
+  margin-top: 20px;
+  padding: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulos {
+  font-family: "h1";
+  color: #4a2c7a; /* Violeta obscuro de la imagen (mucha fuerza visual) */
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  text-shadow: 0 2px 4px rgba(74, 44, 122, 0.15);
+}
+
+/* Menu */
+.navbar {
+  border-bottom: 1px solid rgba(74, 44, 122, 0.15);
+  /* CORRECCIÓN: Un fondo ultra suave por defecto para que los textos superiores no queden flotando en el vacío */
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(74, 44, 122, 0.15);
+}
+
+.navbar .nav-link {
+  color: #4a2c7a;
+  background: none;
+  font-weight: 700;
+}
+
+.navbar .nav-link.active {
+  color: #ffffff;
+  font-weight: bold;
+  background: #613d9b;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(97, 61, 155, 0.3);
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #613d9b;
+}
+
+/* ====== CORRECCIÓN TOTAL DE LOGO Y LOGOTIPO CENTRAL ====== */
+/* Esta regla aplica tanto al logo del nav como a la imagen central del index */
+.logo img,
+.logotipo img {
+  width: auto;
+  /* CORRECCIÓN: Filtro de alta saturación. Forza a la imagen gris/blanca a tomar el color de la marca con viveza, eliminando el tono gris opaco */
+  filter: invert(10%) sepia(20%) saturate(4500%) hue-rotate(245deg)
+    brightness(30%) contrast(150%);
+  opacity: 0.95;
+  transition:
+    filter 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* Pequeña optimización de tamaño para el navbar */
+.logo img {
+  width: 50px;
+  margin-right: 20px;
+}
+
+.cont-sub {
+  border: 1.5px solid #613d9b;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 10px rgba(74, 44, 122, 0.1);
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.sub-s {
+  color: #4a2c7a;
+  font-weight: 700;
+}
+
+.sub-s:hover {
+  background: #4a2c7a;
+  color: #ffffff;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+.hero {
+  height: auto;
+  padding: 20px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  height: auto;
+  color: #4a2c7a;
+  padding: 25px 30px;
+  border-top: 2px solid rgba(74, 44, 122, 0.3);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+footer h5 {
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+footer p {
+  margin-bottom: 0;
+  word-break: break-word;
+  color: #3b2063;
+  font-weight: 500;
+}
+
+@media (min-width: 989px) and (max-width: 1200px) {
+  .titulos {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulos {
+    font-size: 2rem; /* móvil */
+  }
+}
+
+@media (min-width: 480px) and (max-width: 968px) {
+  .titulos {
+    font-size: 2.5rem; /* móvil */
+  }
+}
+
+/* ====== FONDO DEGRADADO ====== */
+body {
+  --x-0: 85%;
+  --c-0: hsla(230, 85%, 90%, 1);
+  --y-0: 20%;
+  --c-1: hsla(265, 55%, 86%, 1);
+  --y-1: 75%;
+  --x-1: 15%;
+  --c-2: hsla(25, 100%, 94%, 1);
+  --x-2: 50%;
+  --y-2: 40%;
+  --c-3: hsla(260, 45%, 82%, 1);
+  --x-3: 90%;
+  --y-3: 85%;
+
+  background-color: #ede9fe;
+  background-image:
+    radial-gradient(
+      circle at var(--x-0) var(--y-0),
+      var(--c-0) var(--s-start-0),
+      transparent var(--s-end-0)
+    ),
+    radial-gradient(
+      circle at var(--x-1) var(--y-1),
+      var(--c-1) var(--s-start-1),
+      transparent var(--s-end-1)
+    ),
+    radial-gradient(
+      circle at var(--x-2) var(--y-2),
+      var(--c-2) var(--s-start-2),
+      transparent var(--s-end-2)
+    ),
+    radial-gradient(
+      circle at var(--x-3) var(--y-3),
+      var(--c-3) var(--s-start-3),
+      transparent var(--s-end-3)
+    );
+  animation: hero-gradient-animation 12s linear infinite alternate;
+  background-blend-mode: normal, normal, normal, normal;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  min-height: 100vh;
+}
+
+@font-face {
+  font-family: "h1";
+  src: url("../assets/fonts/Jumps\ Winter.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes hero-gradient-animation {
+  0% {
+    --s-start-0: 15%;
+    --s-end-0: 65%;
+    --x-0: 85%;
+    --y-0: 20%;
+    --s-start-1: 10%;
+    --s-end-1: 75%;
+    --y-1: 75%;
+    --x-1: 15%;
+    --s-start-2: 5%;
+    --s-end-2: 45%;
+    --x-2: 50%;
+    --y-2: 40%;
+    --s-start-3: 15%;
+    --s-end-3: 70%;
+    --x-3: 90%;
+    --y-3: 85%;
+  }
+
+  100% {
+    --s-start-0: 15%;
+    --s-end-0: 65%;
+    --x-0: 20%;
+    --y-0: 80%;
+    --s-start-1: 10%;
+    --s-end-1: 75%;
+    --y-1: 20%;
+    --x-1: 80%;
+    --s-start-2: 5%;
+    --s-end-2: 45%;
+    --x-2: 45%;
+    --y-2: 50%;
+    --s-start-3: 15%;
+    --s-end-3: 70%;
+    --x-3: 10%;
+    --y-3: 15%;
+  }
+}
+
+@property --s-start-0 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 15%;
+}
+
+@property --s-end-0 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 65%;
+}
+
+@property --x-0 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 85%;
+}
+
+@property --c-0 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsla(230, 85%, 90%, 1);
+}
+
+@property --y-0 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 20%;
+}
+
+@property --c-1 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsla(265, 55%, 86%, 1);
+}
+
+@property --s-start-1 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 10%;
+}
+
+@property --s-end-1 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 75%;
+}
+
+@property --y-1 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 75%;
+}
+
+@property --x-1 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 15%;
+}
+
+@property --s-start-2 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 5%;
+}
+
+@property --s-end-2 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 45%;
+}
+
+@property --c-2 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsla(25, 100%, 94%, 1);
+}
+
+@property --x-2 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+
+@property --y-2 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 40%;
+}
+
+@property --c-3 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsla(260, 45%, 82%, 1);
+}
+
+@property --x-3 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 90%;
+}
+
+@property --s-start-3 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 15%;
+}
+
+@property --s-end-3 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 70%;
+}
+
+@property --y-3 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 85%;
+}
