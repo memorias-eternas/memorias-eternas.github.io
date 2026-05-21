@@ -504,20 +504,19 @@
   background-color: rgb(164, 148, 185);
 }
 
-/* Color para "Ver más" (el botón primario de acción) */
+/* ====== Ver más ====== */
 .ver-mas-opciones.btn-outline-light {
-  color: #ffffff; /* Texto */
-  border-color: rgb(164, 148, 185); /* Color de tu marca */
+  color: #ffffff;
+  border-color: rgb(164, 148, 185);
   background-color: hsla(265, 55%, 86%, 1);
 }
 
 .ver-mas-opciones.btn-outline-light:hover {
   color: rgb(164, 148, 185);
-  background-color: #fff; /* Color para el efecto hover */
+  background-color: #fff;
   border-color: hsla(265, 55%, 86%, 1);
 }
 
-/* Busca el botón específicamente y cambia su color */
 .btn.btn-link.link-light {
-  color: #212529 !important; /* Sustituye este valor por el color de tu marca */
+  color: #212529 !important;
 }

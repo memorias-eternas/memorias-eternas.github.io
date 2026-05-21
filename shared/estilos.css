@@ -17,7 +17,6 @@ header {
 /* Menu */
 .navbar {
   border-bottom: 1px solid rgba(74, 44, 122, 0.15);
-  /* CORRECCIÓN: Un fondo ultra suave por defecto para que los textos superiores no queden flotando en el vacío */
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -55,12 +54,10 @@ header {
   color: #613d9b;
 }
 
-/* ====== CORRECCIÓN TOTAL DE LOGO Y LOGOTIPO CENTRAL ====== */
-/* Esta regla aplica tanto al logo del nav como a la imagen central del index */
+/* ====== LOGO Y LOGOTIPO CENTRAL ====== */
 .logo img,
 .logotipo img {
   width: auto;
-  /* CORRECCIÓN: Filtro de alta saturación. Forza a la imagen gris/blanca a tomar el color de la marca con viveza, eliminando el tono gris opaco */
   filter: invert(10%) sepia(20%) saturate(4500%) hue-rotate(245deg)
     brightness(30%) contrast(150%);
   opacity: 0.95;
@@ -69,7 +66,6 @@ header {
     opacity 0.3s ease;
 }
 
-/* Pequeña optimización de tamaño para el navbar */
 .logo img {
   width: 50px;
   margin-right: 20px;
@@ -359,4 +355,12 @@ body {
   syntax: "<percentage>";
   inherits: false;
   initial-value: 85%;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%234a2c7a' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler {
+  border-color: #4a2c7a;
 }

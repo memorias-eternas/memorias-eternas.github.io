@@ -5,7 +5,6 @@
   -webkit-backdrop-filter: blur(50px);
 }
 
-/* Card base - De café/oro a Glassmorphism Claro y Limpio */
 .pricing-card {
   position: relative;
   height: 100%;
@@ -15,14 +14,12 @@
   margin: 0 auto;
   padding: 2rem 1.5rem 1.5rem;
 
-  /* Modificado: Fondo claro premium consistente */
   background: rgba(255, 255, 255, 0.75);
-  /* Modificado: Borde sutil oscuro */
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
 
-  color: #111111; /* Modificado: Texto en negro elegante */
+  color: #111111;
   text-align: center;
 
   backdrop-filter: blur(12px);
@@ -35,29 +32,23 @@
   flex-direction: column;
 }
 
-/* Hover elegante sin dorado */
 .pricing-card:hover {
   transform: translateY(-20px);
-  /* Modificado: Brillo púrpura suave al pasar el cursor */
   border-color: rgba(164, 148, 185, 0.6);
   box-shadow: 0 12px 28px rgba(164, 148, 185, 0.15);
 }
 
-/* Card destacada (intermedio) - Enfoque Púrpura/Lavanda */
 .pricing-card.featured {
-  /* Modificado: Destacado usando el borde de marca */
   border-color: rgb(164, 148, 185);
   background: rgba(255, 255, 255, 0.85);
   transform: scale(1.02);
 }
 
-/* Que en hover se sienta un poco más destacada */
 .pricing-card.featured:hover {
   transform: translateY(-22px) scale(1.03);
   border-color: rgba(164, 148, 185, 0.9);
 }
 
-/* Badge superior */
 .plan-badge {
   position: absolute;
   top: 14px;
@@ -65,7 +56,6 @@
   font-size: 0.85rem;
   padding: 0.35rem 0.7rem;
   border-radius: 999px;
-  /* Modificado: Fondo lavanda pastel con texto negro elegante */
   background: hsla(265, 55%, 86%, 1);
   color: #111111;
   font-weight: 600;
@@ -77,20 +67,19 @@
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 0.6rem;
-  color: #111111; /* Modificado: Negro elegante */
+  color: #111111;
   letter-spacing: 0.8px;
 }
 
 .plan-description {
   font-size: 0.95rem;
-  color: #444444; /* Modificado: Gris oscuro legible */
+  color: #444444;
   margin-bottom: 1.4rem;
   text-align: start;
   line-height: 1.5;
   padding-left: 1rem;
 }
 
-/* Lista con estilo tipo planeación */
 .plan-list {
   margin: 0 0 1.6rem 0;
   padding: 0;
@@ -101,7 +90,6 @@
   flex-grow: 1;
 }
 
-/* Modificado: El checkmark ahora es púrpura marca, eliminando el dorado */
 .plan-list li::before {
   content: "✓";
   margin-right: 8px;
@@ -113,18 +101,17 @@
 .plan-price {
   font-size: 2rem;
   font-weight: 700;
-  color: #111111; /* Modificado: Negro */
+  color: #111111;
   margin-top: 0.5rem;
   margin-bottom: 1.4rem;
 }
 
 .plan-price span {
   font-size: 1rem;
-  color: #666666; /* Modificado: Gris intermedio */
+  color: #666666;
   font-weight: 400;
 }
 
-/* Botón - De oro viejo a Lavanda Pastel sólido */
 .plan-button {
   display: inline-flex;
   width: 100%;
@@ -139,7 +126,6 @@
   cursor: pointer;
   text-decoration: none;
 
-  /* Modificado: Lavanda pastel institucional */
   background: hsla(265, 55%, 86%, 1);
   color: #111111;
   border: 2px solid transparent;
@@ -156,7 +142,7 @@
 }
 
 /* ===========================
-   ESTILO DEL MODAL CONTRATO (Limpio y claro)
+   ESTILO DEL MODAL CONTRATO
    =========================== */
 
 /* Fondo detrás del modal */
@@ -166,13 +152,8 @@
 
 /* Caja principal del modal */
 .contrato-modal {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.95
-  ); /* Modificado: Fondo claro premium */
-  color: #111111; /* Modificado: Texto negro */
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #111111;
   border-radius: 18px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
@@ -192,7 +173,7 @@
   color: #111111;
 }
 
-/* Inputs consistentes con la marca */
+/* Inputs */
 .contrato-modal .form-control,
 .contrato-modal .form-select {
   background-color: #ffffff;
@@ -210,7 +191,6 @@
   box-shadow: 0 0 0 3px rgba(164, 148, 185, 0.3);
 }
 
-/* Lista de métodos de pago */
 .contrato-modal .list-group-item {
   background-color: #ffffff;
   border-color: rgba(0, 0, 0, 0.06);
@@ -221,7 +201,6 @@
   background-color: rgba(0, 0, 0, 0.02);
 }
 
-/* Radios / Checkboxes púrpuras */
 .contrato-modal .form-check-input {
   background-color: transparent;
   border-color: rgba(0, 0, 0, 0.25);
@@ -232,7 +211,6 @@
   border-color: rgb(164, 148, 185);
 }
 
-/* Caja donde se muestra el contrato en pantalla */
 .contrato-caja {
   background-color: #fafafa;
   border-color: rgba(0, 0, 0, 0.1) !important;
@@ -251,7 +229,7 @@
 }
 
 .contrato-modal .btn-primary {
-  background-color: hsla(265, 55%, 86%, 1); /* Modificado a lavanda pastel */
+  background-color: hsla(265, 55%, 86%, 1);
   border-color: transparent;
   color: #111111;
   font-weight: 600;

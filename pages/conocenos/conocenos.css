@@ -14,28 +14,25 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  background: rgba(255, 255, 255, 0.75); /* Modificado: Fondo claro glass */
-  border: 1px solid rgba(0, 0, 0, 0.08); /* Modificado: Borde sutil oscuro */
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04); /* Modificado: Sombra suave */
-
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-
   transition: 0.25s ease-in-out;
 }
 
-/* Reacción al cursor con tu toque dorado sutil */
+/* Reacción al cursor */
 .texto_c:hover {
   transform: translateY(-4px);
-  border-color: rgb(164, 148, 185); /* Dorado un poco más definido */
+  border-color: rgb(164, 148, 185);
   box-shadow: 0 12px 28px rgb(123, 111, 139);
 }
 
 .texto_c p {
   font-size: 1.2em;
-  color: #444444; /* Modificado: Gris oscuro de alta legibilidad */
+  color: #444444;
   line-height: 1.7;
   margin-bottom: 1rem;
 }
@@ -58,23 +55,15 @@
   height: 500px;
   width: 90%;
   border-radius: 20px;
-
-  background: rgba(
-    255,
-    255,
-    255,
-    0.75
-  ); /* Modificado: Fondo consistente claro */
-  border: 1px solid rgba(0, 0, 0, 0.08); /* Modificado: Borde sutil */
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-
   transition: 0.25s ease-in-out;
 }
 
-/* Reacción del mapa con destello de marca */
+/* Reacción del mapa */
 .mapa_gps iframe:hover {
   transform: scale(1.03);
   border-color: rgb(164, 148, 185);
@@ -100,15 +89,15 @@
   align-items: center;
 }
 
-/* Tooltip premium claro con borde dorado de marca */
+/* Tooltip premium claro */
 .icon-content .tooltip {
   position: absolute;
   top: -30px;
   left: 50%;
   transform: translateX(-50%);
-  background: #ffffff; /* Modificado: Fondo blanco limpio */
-  border: 1px solid rgb(164, 148, 185); /* Aura dorada sutil */
-  color: #111111; /* Modificado: Texto en negro */
+  background: #ffffff;
+  border: 1px solid rgb(164, 148, 185);
+  color: #111111;
   padding: 6px 10px;
   border-radius: 999px;
   opacity: 0;
@@ -135,14 +124,11 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
-
-  background: rgba(255, 255, 255, 0.75); /* Modificado: Fondo claro glass */
-  border: 1px solid rgba(0, 0, 0, 0.08); /* Modificado: Borde sutil */
-
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-
   transition: 0.25s ease-in-out;
   margin: auto;
   cursor: pointer;
@@ -153,15 +139,15 @@
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
 }
 
-/* Imagen dentro - CORRECCIÓN: Se quitó invert(1) para que los logos de pagos no se vean raros ni forzados en blanco */
+/* Imagen dentro */
 .icon-content .icon-img {
   width: 36px;
   height: 36px;
   object-fit: contain;
-  filter: none; /* Modificado: Muestra los colores originales de los logos de tarjetas/bancos */
+  filter: none;
 }
 
-/* ====== COLORES POR MEDIO DE PAGO (RESTAURADOS Y UNIFICADOS) ====== */
+/* ====== COLORES POR MEDIO DE PAGO ====== */
 .link[data-social="efectivo"]:hover {
   background-color: rgba(29, 133, 34, 0.1);
   border-color: #1d8522;
@@ -204,7 +190,7 @@
   margin-top: 8px;
   font-size: 14px;
   font-weight: 600;
-  color: #111111; /* Modificado: Letras en negro */
+  color: #111111;
 }
 
 /* ====== RESPONSIVE ====== */
@@ -258,28 +244,23 @@
   }
 }
 
-/* ====== MODAL GLASS MEDIOS DE PAGO (Estilo Premium Claro) ====== */
+/* ====== MODAL GLASS MEDIOS DE PAGO ====== */
 .modal-pagos-dialog {
   max-width: 720px;
 }
 
-/* Estilo Glass Claro para la tarjeta contenedora del modal */
+/* Estilo Glass Claro */
 .modal-glass {
-  background: rgba(
-    255,
-    255,
-    255,
-    0.9
-  ) !important; /* Modificado: Fondo blanco glassmorphism */
-  border: 1px solid rgba(0, 0, 0, 0.08) !important; /* Modificado: Borde sutil oscuro */
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
   border-radius: 24px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08); /* Modificado: Sombra fina */
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  color: #111111; /* Modificado: Texto negro */
+  color: #111111;
 }
 
-/* Título y subtítulo con acento de color */
+/* Título y subtítulo */
 .modal-glass .modal-title {
   font-size: 1.5rem;
   font-weight: 700;
@@ -287,12 +268,12 @@
   white-space: normal;
   word-wrap: break-word;
   word-break: break-word;
-  color: hsla(265, 55%, 86%, 1); /* Dorado institucional */
+  color: hsla(265, 55%, 86%, 1);
 }
 
 .modal-glass #modalPagoSubtitle {
   font-size: 0.95rem;
-  color: #666666; /* Modificado: Gris oscuro legible */
+  color: #666666;
   text-align: center;
   white-space: normal;
   word-wrap: break-word;
@@ -301,7 +282,7 @@
 
 /* Texto del cuerpo */
 .modal-glass .modal-body {
-  color: #444444; /* Modificado: Texto del cuerpo en gris oscuro */
+  color: #444444;
   font-size: 1.05rem;
   line-height: 1.7;
   padding: 1.5rem 2rem;
@@ -310,17 +291,17 @@
 /* Nota inferior */
 .modal-glass .modal-note {
   font-size: 0.88rem;
-  color: #777777; /* Modificado: Gris para anotaciones secundarias */
-  border-top: 1px solid rgba(0, 0, 0, 0.06); /* Modificado: Separador suave */
+  color: #777777;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
   padding-top: 1rem;
   margin-bottom: 0;
   font-style: italic;
 }
 
-/* Botón Ir a Contacto (Consistente con los principales en negro elegante) */
+/* Botón Ir a Contacto */
 .modal-glass #btnIrContacto {
-  background: rgb(164, 148, 185); /* Modificado: Botón en negro sólido */
-  color: #ffffff; /* Modificado: Texto blanco */
+  background: rgb(164, 148, 185);
+  color: #ffffff;
   border: 2px solid transparent;
   border-radius: 12px;
   font-weight: 700;

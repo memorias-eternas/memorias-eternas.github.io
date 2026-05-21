@@ -5,12 +5,10 @@
   margin: 0 auto;
 }
 
-/* Contenedor de cada comentario */
 .op-card {
   margin-bottom: 25px;
 }
 
-/* Card de opinión (Modificado a base clara y limpia) */
 .card-op {
   position: relative;
   width: 100%;
@@ -27,28 +25,24 @@
   margin-right: auto;
 }
 
-/* Hover con toque dorado */
 .card-op:hover {
   transform: translateY(-6px);
   border-color: rgba(212, 175, 55, 0.5);
   box-shadow: 0 12px 28px rgba(212, 175, 55, 0.12);
 }
 
-/* Nombre */
 .name-op h4 {
   letter-spacing: 0.3px;
   color: #111111;
   font-weight: 700;
 }
 
-/* Texto del comentario */
 .card-op .card-text {
   color: #444444;
   line-height: 1.6;
   font-size: 1.05rem;
 }
 
-/* Estrellas - Dorado clásico respetado */
 .card-op .card-footer {
   font-size: 1.1rem;
   letter-spacing: 1px;
@@ -57,7 +51,6 @@
   color: #d4af37 !important;
 }
 
-/* Botones ver más / menos */
 #loadMore,
 #showLess {
   border-radius: 12px;
@@ -73,12 +66,10 @@
 #showLess:hover {
   transform: translateY(-2px);
   border-color: rgb(164, 148, 185);
-  /* CORRECCIÓN: Al pasar el cursor, el fondo se vuelve el lavanda sólido de tu paleta para que el texto blanco (#fff) destaque perfectamente */
   color: #fff;
   background-color: rgb(164, 148, 185);
 }
 
-/* ====== FORMULARIO OPINIONES ====== */
 .form-card {
   background: rgba(255, 255, 255, 0.75);
   border-radius: 20px;
@@ -90,7 +81,6 @@
   padding: 2rem;
 }
 
-/* Inputs / textarea / select */
 #opinionForm input,
 #opinionForm textarea,
 #opinionForm select {
@@ -108,24 +98,21 @@
   color: #888888;
 }
 
-/* Focus suave */
 #opinionForm input:focus,
 #opinionForm textarea:focus,
 #opinionForm select:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(164, 148, 185, 0.3); /* Resplandor a tono con tu borde lavanda */
+  box-shadow: 0 0 0 3px rgba(164, 148, 185, 0.3);
   border-color: hsla(260, 45%, 82%, 1);
-  color: #111111; /* CORRECCIÓN: El texto se mantiene negro al escribir para que el usuario pueda leer lo que pone */
+  color: #111111;
   background-color: #ffffff;
 }
 
-/* Opciones del select */
 #opinionForm select option {
   background-color: #ffffff;
   color: #111111;
 }
 
-/* Botón enviar */
 .btn-form {
   display: inline-flex;
   justify-content: center;
@@ -141,16 +128,11 @@
 
 .btn-form:hover {
   background: transparent;
-  color: rgb(
-    164,
-    148,
-    185
-  ); /* Mejorado: un tono ligeramente más oscuro que el fondo original para que no se pierda en el blanco */
+  color: rgb(164, 148, 185);
   border-color: rgb(164, 148, 185);
   transform: translateY(-2px);
 }
 
-/* ====== RESPONSIVE ====== */
 @media (max-width: 576px) {
   .opiniones {
     padding: 35px 15px;

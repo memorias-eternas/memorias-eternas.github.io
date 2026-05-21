@@ -28,7 +28,7 @@
   max-width: 960px;
   margin: 0 auto;
   row-gap: 16px;
-  background: transparent !important; /* Fuerza que el contenedor del acordeón no tenga fondo */
+  background: transparent !important;
 }
 
 /* ====== ACCORDION GLASS PREMIUM ====== */
@@ -36,11 +36,9 @@
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 18px !important;
   overflow: hidden;
-
-  background: rgb(164, 148, 185) !important; /* Tu fondo oscuro glass */
+  background: rgb(164, 148, 185) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
   transition: 0.25s ease-in-out;
   margin-bottom: 16px;
@@ -56,7 +54,7 @@
 .accordion-button {
   display: flex !important;
   align-items: center !important;
-  gap: 12px; /* Separación limpia para tus spans de icono y título */
+  gap: 12px;
   font-weight: 700;
   font-size: 1rem;
   padding: 18px 22px;
@@ -70,38 +68,28 @@
   color: #ffffff !important;
 }
 
-/* Estado Expandido/Abierto - AQUÍ BOOTSTRAP METÍA EL AZUL Y BLANCO */
+/* Estado Expandido / Abierto */
 .accordion-button:not(.collapsed) {
-  background: rgba(
-    255,
-    255,
-    255,
-    0.06
-  ) !important; /* Fondo sutil de selección */
-  color: #ffffff !important; /* Forzamos texto blanco */
-  box-shadow: none !important; /* Eliminamos el sombreado azul predeterminado */
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
 }
 
-/* Quitar por completo el foco azul/celeste de Bootstrap al clickear */
+/* Remoción del foco predeterminado de Bootstrap */
 .accordion-button:focus {
   box-shadow: none !important;
   outline: none !important;
   border-color: transparent !important;
-  background: rgba(
-    255,
-    255,
-    255,
-    0.06
-  ) !important; /* Mantiene la consistencia estética si está abierto */
+  background: rgba(255, 255, 255, 0.06) !important;
   color: #ffffff !important;
 }
 
-/* SOLUCIÓN AL ICONO: Invierte el SVG de la flecha de Bootstrap para que sea blanca */
+/* Inversión de color para la flecha del indicador */
 .accordion-button::after {
   filter: brightness(0) invert(1) !important;
 }
 
-/* Clases de utilidad para los elementos internos de tus botones */
+/* Clases de utilidad internas */
 .acc-icon {
   font-size: 1.25rem;
   line-height: 1;
@@ -115,11 +103,11 @@
 /* Cuerpo del acordeón */
 .accordion-body {
   font-size: 0.95rem;
-  color: #cfcfcf !important; /* Asegura el gris claro legible sobre el fondo oscuro */
+  color: #cfcfcf !important;
   padding: 18px 22px;
   line-height: 1.7;
   min-height: 280px;
-  background: transparent !important; /* Transparente para que no pinte un fondo blanco e個別 */
+  background: transparent !important;
 }
 
 /* ====== IMÁGENES EXTRAS ====== */
@@ -138,10 +126,8 @@
   height: auto;
   object-fit: cover;
   border-radius: 14px;
-
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-
   transition: 0.25s ease-in-out;
 }
 
@@ -157,7 +143,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 30px; /* Separación con respecto al acordeón */
+  margin-top: 30px;
 }
 
 .btn-contacto {
