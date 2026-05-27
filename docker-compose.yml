@@ -1,0 +1,56 @@
+version: "3.8"
+
+services:
+  # El motor de nuestra Base de Datos
+  db:
+    image: postgres:17-alpine
+    container_name: postgres_comentarios
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: bd_comentarios
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - red_comentarios
+
+  # Interfaz gráfica web para revisar la base de datos
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_contenedor
+    environment:
+      PGADMIN_DEFAULT_EMAIL: gutierrez.turrubiartes.yahir0@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    networks:
+      - red_comentarios
+
+  # Servicio de backend con FastAPI
+  backend:
+    image: python:3.11-slim
+    container_name: fastapi_comentarios
+    volumes:
+      - ./backend:/app
+    working_dir: /app
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://admin:admin@db:5432/bd_comentarios
+    command: >
+      bash -c "pip install --no-cache-dir -r requirements.txt &&
+               uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
+    depends_on:
+      - db
+    networks:
+      - red_comentarios
+
+volumes:
+  db_data:
+
+networks:
+  red_comentarios:

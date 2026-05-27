@@ -1,0 +1,6 @@
+Ver base de datos
+PgAdmin:
+    http://localhost:8080/browser/
+
+Json:
+    http://localhost:8000/api/opiniones
